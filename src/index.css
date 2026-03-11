@@ -1,0 +1,184 @@
+/* Oman MOH - Doctor Consultation Module */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f0f2f5;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bfbfbf;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8c8c8c;
+}
+
+/* Ant Design Overrides - Unified */
+.ant-card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  border-radius: 12px;
+  border: 1px solid #e8e8e8;
+}
+
+.ant-card-head {
+  min-height: 40px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.ant-card-head-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.ant-table-thead > tr > th {
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  background: #fafafa !important;
+}
+
+.ant-table-tbody > tr > td {
+  font-size: 13px;
+}
+
+/* Urgent appointment row */
+.urgent-row {
+  background: #fff2f0 !important;
+}
+
+.urgent-row:hover > td {
+  background: #ffebe8 !important;
+}
+
+/* Steps customization */
+.ant-steps-item-process .ant-steps-item-icon {
+  background: #005c3f;
+  border-color: #005c3f;
+}
+
+.ant-steps-item-finish .ant-steps-item-icon {
+  border-color: #005c3f;
+}
+
+.ant-steps-item-finish .ant-steps-item-icon > .ant-steps-icon {
+  color: #005c3f;
+}
+
+.ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after {
+  background-color: #005c3f;
+}
+
+/* Collapse panels */
+.ant-collapse-header {
+  font-weight: 500;
+  padding: 12px 16px !important;
+}
+
+.ant-collapse-content-box {
+  padding: 0 !important;
+}
+
+.ant-collapse > .ant-collapse-item {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Drawer domain panel */
+.ant-drawer-body {
+  padding: 0 !important;
+}
+
+.ant-drawer-header {
+  border-bottom: 2px solid #005c3f;
+}
+
+.ant-drawer-title {
+  font-weight: 600;
+}
+
+/* Radio button group */
+.ant-radio-button-wrapper-checked {
+  background: #005c3f !important;
+  border-color: #005c3f !important;
+}
+
+/* Tag unified pill style for status tags */
+.ant-tag {
+  border-radius: 6px;
+}
+
+/* TextArea: disable resize handle, character count inside bottom-right */
+.ant-input-textarea textarea {
+  resize: none !important;
+}
+
+.ant-input-textarea-show-count {
+  position: relative;
+}
+
+.ant-input-textarea-show-count::after {
+  position: absolute;
+  right: 10px;
+  bottom: 8px;
+  font-size: 10px;
+  color: #c0c0c0 !important;
+  margin: 0;
+  pointer-events: none;
+  line-height: 1;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+/* Print styles */
+@media print {
+  .ant-layout-sider,
+  .ant-layout-header,
+  .ant-btn,
+  .ant-steps {
+    display: none !important;
+  }
+
+  .ant-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #d9d9d9;
+  }
+}
+
+/* Recording indicator animation */
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.recording-indicator {
+  animation: pulse 1.5s infinite;
+}
