@@ -6,7 +6,6 @@ import {
   CalendarOutlined,
   ClockCircleOutlined,
   CheckCircleOutlined,
-  ArrowRightOutlined,
   AlertOutlined,
   PlayCircleOutlined,
   MedicineBoxOutlined,

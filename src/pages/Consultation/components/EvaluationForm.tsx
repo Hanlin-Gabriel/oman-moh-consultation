@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Typography, Input, Alert, Tag } from 'antd';
+import { Card, Input, Alert, Tag } from 'antd';
 import {
   FileSearchOutlined,
   EditOutlined,
@@ -10,8 +10,6 @@ import SectionIcon from '../../../components/common/SectionIcon';
 import { colors, cardStyles, radius } from '../../../theme/designTokens';
 
 const { TextArea } = Input;
-const { Text } = Typography;
-
 const EvaluationForm: React.FC = () => {
   const consultation = useConsultationStore((s) => s.consultation);
   const currentAppointment = useConsultationStore((s) => s.currentAppointment);

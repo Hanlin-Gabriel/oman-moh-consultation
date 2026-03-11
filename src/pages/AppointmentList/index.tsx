@@ -31,18 +31,9 @@ import dayjs from 'dayjs';
 import type { Appointment, AppointmentStatus } from '../../types';
 import { appointments as initialAppointments } from '../../mock/data';
 import { useConsultationStore } from '../../store/consultationStore';
-import { colors, cardStyles, radius } from '../../theme/designTokens';
+import { colors, cardStyles } from '../../theme/designTokens';
 
 const { Title, Text } = Typography;
-
-const statusColors: Record<AppointmentStatus, string> = {
-  Scheduled: 'default',
-  'Checked-in': 'processing',
-  'In Visit': 'warning',
-  Completed: 'success',
-  'No Show': 'error',
-  Cancelled: 'error',
-};
 
 const AppointmentList: React.FC = () => {
   const navigate = useNavigate();
